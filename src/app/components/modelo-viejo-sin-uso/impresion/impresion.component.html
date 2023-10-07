@@ -1,0 +1,49 @@
+<iframe>
+  <div><p>golasad</p></div>
+
+  <div class="button-container">
+    <button
+      printSectionId="print-me"
+      ngxPrint
+      [useExistingCss]="true"
+      mat-icon-button
+      color="primary"
+      id="submitButton"
+      mat-dialog-close
+    >
+      <mat-icon>print</mat-icon>
+    </button>
+  </div>
+
+  <div style="display: flex; justify-content: center">
+    <div id="print-me">
+      <div class="etiqueta-container">
+        <div class="precio-vertical">${{ datos.precio }}</div>
+
+        <div class="detalles">
+          <div class="barcode-container">
+            <div class="barcode-talle">{{ datos.talle }}</div>
+            <ngx-barcode
+              [bc-width]="widthBarcode"
+              [bc-height]="heightBarcode"
+              [bc-value]="datos.codBarras"
+              [bc-display-value]="true"
+            ></ngx-barcode>
+            <div class="barcode-ubicacion">{{ datos.ubicaTate }}</div>
+          </div>
+
+          <div class="description-container">
+            <span id="desc-1">{{ datos.detalle1 }}</span>
+
+            <div id="desc-container">
+              <span id="desc-2">{{ datos.detalle2 }}</span>
+              <span id="desc-marca">{{ datos.marca }}</span>
+            </div>
+
+            <span id="desc-3">AP {{ datos.codigoProdProvee }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</iframe>

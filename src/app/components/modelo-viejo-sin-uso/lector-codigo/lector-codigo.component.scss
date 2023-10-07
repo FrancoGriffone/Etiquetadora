@@ -1,0 +1,90 @@
+.scanner-container {
+  display: flex;
+  justify-content: center;
+  margin: 10% auto auto auto;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+// ESTILOS DE ETIQUETA
+
+.hidden-etiqueta {
+  display: none;
+}
+
+.button-container {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.etiqueta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 500px;
+  height: 200px;
+  //filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+.precio-vertical {
+  -webkit-transform: rotate(90deg);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.detalles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: bold;
+  gap: 5px;
+
+  .barcode-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .barcode-talle {
+    -webkit-transform: rotate(90deg);
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .barcode-ubicacion {
+    -webkit-transform: rotate(90deg);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+
+    #desc-2,
+    #desc-1,
+    #desc-3 {
+      font-size: 16px;
+    }
+
+    #desc-marca {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    #desc-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

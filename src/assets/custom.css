@@ -1,0 +1,57 @@
+.etiqueta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 500px;
+  height: 200px;
+}
+.precio-vertical {
+  -webkit-transform: rotate(90deg);
+  font-size: 42px;
+  font-weight: bold;
+}
+.detalles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: bold;
+  gap: 5px;
+}
+.detalles .barcode-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.detalles .barcode-image {
+  width: 73%;
+}
+.detalles .barcode-talle {
+  -webkit-transform: rotate(90deg);
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.detalles .description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+.detalles .description-container #desc-2,
+.detalles .description-container #desc-1,
+.detalles .description-container #desc-3 {
+  font-size: 20px;
+}
+.detalles .description-container #desc-marca {
+  font-size: 14px;
+}
+.detalles .description-container #desc-container {
+  display: flex;
+  flex-direction: column;
+}

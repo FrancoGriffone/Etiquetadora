@@ -1,0 +1,26 @@
+<div class="container">
+  <table>
+    <ng-container *ngFor="let locales of locales">
+      <tr>
+        <td>
+          <h3>{{ locales.local }}</h3>
+        </td>
+        <td></td>
+        <button
+          mat-raised-button
+          (click)="seleccionado(locales.id)"
+          [ngStyle]="{
+            backgroundColor:
+              localesStorage == locales.id ? 'rgb(62,81,180)' : 'white'
+          }"
+        >
+          {{
+            localesStorage == locales.id
+              ? "PREDETERMINADA"
+              : "ELEGIR COMO PREDETERMINADA"
+          }}
+        </button>
+      </tr>
+    </ng-container>
+  </table>
+</div>

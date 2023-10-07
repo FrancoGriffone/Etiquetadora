@@ -1,0 +1,36 @@
+<div class="container" [formGroup]="miFormulario">
+  <mat-form-field appearance="outline">
+    <mat-label>Impresora</mat-label>
+    <input
+      matInput
+      formControlName="impresora"
+      placeholder="Ej. ZDesigner 203ZPL"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descripcion</mat-label>
+    <input
+      matInput
+      formControlName="descripcion"
+      placeholder="Ej. Deposito Niños"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Direccion IP</mat-label>
+    <input
+      matInput
+      formControlName="direccionIp"
+      placeholder="Ej. 192.168.11.120"
+    />
+  </mat-form-field>
+  <mat-slide-toggle formControlName="usb"> Conexion USB? </mat-slide-toggle>
+  <button
+    style="margin-top: 20px"
+    mat-raised-button
+    color="primary"
+    (click)="nuevaImpresora()"
+    [disabled]="!miFormulario.valid"
+  >
+    GUARDAR CAMBIOS
+  </button>
+</div>

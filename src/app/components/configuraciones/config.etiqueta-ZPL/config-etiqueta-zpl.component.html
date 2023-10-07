@@ -1,0 +1,25 @@
+<div class="container">
+  <table>
+    <ng-container *ngFor="let etiqueta of etiquetas">
+      <tr>
+        <td>
+          <h3>{{ etiqueta }}</h3>
+        </td>
+        <button
+          mat-raised-button
+          (click)="seleccionarEtiqueta(etiqueta)"
+          [ngStyle]="{
+            backgroundColor:
+              etiquetaStorage == etiqueta ? 'rgb(62,81,180)' : 'white'
+          }"
+        >
+          {{
+            etiquetaStorage == etiqueta
+              ? "PREDETERMINADA"
+              : "ELEGIR COMO PREDETERMINADA"
+          }}
+        </button>
+      </tr>
+    </ng-container>
+  </table>
+</div>

@@ -1,0 +1,28 @@
+<div class="container" [formGroup]="miFormulario">
+  <mat-form-field appearance="outline">
+    <mat-label>ID</mat-label>
+    <input matInput formControlName="id" readonly />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Impresora</mat-label>
+    <input matInput formControlName="impresora" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descripcion</mat-label>
+    <input matInput formControlName="descripcion" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Direccion IP</mat-label>
+    <input matInput formControlName="direccionIp" />
+  </mat-form-field>
+  <mat-slide-toggle formControlName="usb"> Conexion USB? </mat-slide-toggle>
+
+  <button
+    style="margin-top: 20px"
+    mat-raised-button
+    color="primary"
+    (click)="guardarCambios()"
+  >
+    GUARDAR CAMBIOS
+  </button>
+</div>

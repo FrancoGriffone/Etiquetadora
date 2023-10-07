@@ -1,0 +1,26 @@
+<div class="container">
+  <table>
+    <ng-container *ngFor="let impresoras of impresoras">
+      <tr>
+        <td>
+          <h3>{{ impresoras.descripcion }}</h3>
+        </td>
+        <td></td>
+        <button
+          mat-raised-button
+          (click)="seleccionado(impresoras.id)"
+          [ngStyle]="{
+            backgroundColor:
+              impresoraStorage == impresoras.id ? 'rgb(62,81,180)' : 'white'
+          }"
+        >
+          {{
+            impresoraStorage == impresoras.id
+              ? "PREDETERMINADA"
+              : "ELEGIR COMO PREDETERMINADA"
+          }}
+        </button>
+      </tr>
+    </ng-container>
+  </table>
+</div>

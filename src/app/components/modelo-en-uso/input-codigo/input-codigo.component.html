@@ -1,0 +1,42 @@
+<div *ngIf="showError" class="overlay" [ngStyle]="imagen()"></div>
+
+<!-- <div class="cinta">
+  <img src="../../../../assets/logo-tate-blanco-03.png" alt="" />
+</div> -->
+
+<div class="main-section">
+  <img src="../../../../assets/barcode-scan.png" alt="" />
+</div>
+
+<div class="scanner-container">
+  <mat-form-field
+    appearance="outline"
+    [formGroup]="miFormulario"
+    class="input-scan"
+  >
+    <mat-label>Ingrese un codigo</mat-label>
+    <input
+      #inputCodigo
+      (blur)="onBlur($event)"
+      matInput
+      placeholder="Placeholder"
+      (keyup.enter)="enviarCodigoACola()"
+      formControlName="codigo"
+      autofocus
+      autocomplete="off"
+      [attr.inputmode]="inputMode ? 'text' : 'none'"
+    />
+  </mat-form-field>
+</div>
+
+<div style="padding-left: 20px">
+  <mat-slide-toggle class="toggle-slide" (change)="toggleInputMode($event)">
+    {{ textTeclado }}
+  </mat-slide-toggle>
+</div>
+
+<div class="bottom-section">
+  <h2><mat-icon>print</mat-icon> {{ nombreImpresora }}</h2>
+  <h2><mat-icon>label</mat-icon>{{ nombreEtiqueta }}</h2>
+  <h2><mat-icon>shopping_bag</mat-icon>{{ nombreLocal }}</h2>
+</div>

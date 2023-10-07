@@ -1,0 +1,20 @@
+<div style="padding: 10px">
+  <button mat-raised-button color="primary" (click)="nuevaImpresora()">
+    AGREGAR IMPRESORA
+  </button>
+</div>
+<div class="container">
+  <table>
+    <ng-container *ngFor="let impresoras of impresoras">
+      <tr>
+        <td>
+          <h3>{{ impresoras.descripcion }}</h3>
+        </td>
+        <td></td>
+        <button mat-raised-button (click)="seleccionado(impresoras)">
+          EDITAR
+        </button>
+      </tr>
+    </ng-container>
+  </table>
+</div>
